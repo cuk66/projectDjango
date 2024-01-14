@@ -1,8 +1,8 @@
 body {
-    background: #305478;
+    background: #4682B4;
 }
 
-aside {
+.main {
     float: left;
     background: #181818;
     width: 20%;
@@ -12,39 +12,59 @@ aside {
     border-right: 5px solid #4d4d4d;
 }
 
-aside img {
-    width: 80px;
+.main img {
+    width: 100px;
     float: left;
+
 }
 
-aside .logo {
-    font-size: 30px;
+.main .logo {
+    font-size: 18px;
     margin-left: 10px;
     font-weight: bold;
+    position: relative;
+    top: 15px;
+    left: -35px;
 }
 
-aside .nav {
-    margin-top: 50px;
+.main .nav {
+    margin-top: 120px;
     font-size: 28px;
 }
 
-aside .nav-list {
+.main .nav-list {
     list-style: none;
 }
 
-aside a {
+.main a {
     text-decoration: none;
 }
 
-aside .nav-item {
+.main .nav-item {
     color: #fff;
     display: block;
     margin-top: 20px;
     transition: transform .6s ease;
 }
 
-aside .nav-item:hover, aside ul a:hover {
-    color: #305478;
+.main .nav-item:hover, .main ul a:hover {
+    color: #4682B4;
     text-decoration: none;
     transform: scale(1.05);
+}
+
+.main-footer {
+    float: left;
+    background: #4d4d4d;
+    width: 20%;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.footer-nav-list {
+    list-style: none;
 }

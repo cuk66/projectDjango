@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
 </head>
 <body>
-<aside>
-    <img src="{% static 'main/img/php.jpg' %}" alt="Лого">
+<aside class="main">
+    <img src="{% static 'main/img/php.png' %}" alt="Лого">
     <span class="logo">programmer</span>
     <h3 class="nav">Навигация</h3>
     <ul class="nav-list">
@@ -24,6 +24,14 @@
         <a href=""><li class="nav-item">Последние вакансии</li></a>
     </ul>
 </aside>
+
+<footer class="main-footer">
+    <ul class="footer-nav-list">
+        <li class="footer-nav-item">Васильцов Владимир Николаевич</li>
+        <li class="footer-nav-item">РИ-220947</li>
+    </ul>
+</footer>
+
 <main>
     {% block content %}
 
