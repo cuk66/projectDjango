@@ -53,18 +53,23 @@ body {
     transform: scale(1.05);
 }
 
-.main-footer {
-    float: left;
-    background: #4d4d4d;
-    width: 20%;
-    color: #fff;
-    border-right: 5px solid #4d4d4d;
+.footer-nav-list {
+    list-style: none;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
+    width: 20%;
+    background-color: #4d4d4d;
 }
 
-.footer-nav-list {
-    list-style: none;
+main .features {
+    float: left;
+    color: #fff;
+    margin-top: 80px;
+    text-align: center;
+    width: 75%;
 }
+
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 800px; margin: 20px auto;}
