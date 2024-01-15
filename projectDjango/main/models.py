@@ -12,3 +12,10 @@ class Relevance(ImageUpload, models.Model):
     table = models.TextField(blank=False, verbose_name='Таблица')
 
 
+class Skills(models.Model):
+    table_name = models.TextField(blank=False, max_length=30, verbose_name='Название таблицы')
+    table = models.TextField(blank=False, verbose_name='Таблица')
+    graph_skills = models.ImageField(blank=False, verbose_name='График по скиллам')
+
+    def __str__(self):
+        return f"{self.table_name} {self.table} {self.graph_skills}"

@@ -1,5 +1,7 @@
 from django.contrib import admin
 from .models import Relevance
+from .models import Skills
+
 
 # Register your models here.
 class RelevanceDisplay(admin.ModelAdmin):
@@ -8,3 +10,9 @@ class RelevanceDisplay(admin.ModelAdmin):
 
 admin.site.register(Relevance, RelevanceDisplay)
 
+
+class SkillsDisplay(admin.ModelAdmin):
+    list_display = ('table_name', 'table', 'graph_skills')
+
+
+admin.site.register(Skills, SkillsDisplay)
