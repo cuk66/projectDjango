@@ -109,3 +109,7 @@ td {
 	border: 1px solid #dddddd;
 	padding: 5px;
 }
+
+.content img {
+    width: 200px;
+}
