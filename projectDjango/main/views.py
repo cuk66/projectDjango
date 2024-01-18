@@ -4,11 +4,13 @@ from django.utils.safestring import mark_safe
 from .models import Skills
 from .models import Geography
 from .models import Relevance
+from .models import Content
 
 
 # Create your views here.
 def index(request):
-    return render(request, 'main/index.html')
+    index_objects = Content.objects.all()
+    return render(request, 'main/index.html', {'index_objects': index_objects})
 
 
 def relevance(request):
@@ -24,3 +26,6 @@ def skills(request):
 def geography(request):
     geography_objects = Geography.objects.all()
     return render(request, 'main/geography.html', {'geography_objects': geography_objects})
+
+def vacancy(request):
+    return render(request, 'main/vacancy.html')

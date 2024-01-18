@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Relevance
 from .models import Skills
 from .models import Geography
+from .models import Content
 
 
 # Register your models here.
@@ -24,3 +25,6 @@ class GeographyDisplay(admin.ModelAdmin):
 
 
 admin.site.register(Geography, GeographyDisplay)
+
+
+admin.site.register(Content)
