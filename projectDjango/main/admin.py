@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Relevance
 from .models import Skills
+from .models import Geography
 
 
 # Register your models here.
@@ -16,3 +17,10 @@ class SkillsDisplay(admin.ModelAdmin):
 
 
 admin.site.register(Skills, SkillsDisplay)
+
+
+class GeographyDisplay(admin.ModelAdmin):
+    list_display = ('graph_salary_level_by_city', 'graph_vacancy_fraction_by_city', 'table')
+
+
+admin.site.register(Geography, GeographyDisplay)

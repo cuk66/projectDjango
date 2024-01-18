@@ -11,7 +11,7 @@
     {% for skills_object in skills_objects %}
         <p>{{ skills_object.table_name }}</p>
         <p>{{ skills_object.table|safe }}</p>
-        <img src="{{ skills_object.graph_skills.url }}" title="ТОП-20 навыков по годам для выбранной профессии"  alt="ТОП-20 навыков по годам для выбранной профессии" width="900px" >
+        <img src="{{ skills_object.graph_skills.url }}" title="ТОП-20 навыков по годам для выбранной профессии"  alt="ТОП-20 навыков по годам для выбранной профессии" width="1000px" >
     {% endfor %}
 </div>
 {% endblock %}

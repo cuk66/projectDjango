@@ -5,6 +5,13 @@
 {% endblock %}
 
 {% block content %}
-<h1>География</h1>
-<p>География</p>
+<div class="content">
+    <h1>География</h1>
+    {% for geography_object in geography_objects %}
+        <img src="{{ geography_object.graph_salary_level_by_city.url }}" title="Уровень зарплат по городам"  alt="Уровень зарплат по городам" width="1000px" >
+        <img src="{{ geography_object.graph_vacancy_fraction_by_city.url }}" title="Доля вакансий по городам"  alt="Доля вакансий по городам" width="1000px" >
+        <p>{{ geography_object.table|safe }}</p>
+    {% endfor %}
+
+</div>
 {% endblock %}
