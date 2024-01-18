@@ -3,6 +3,7 @@ from .models import Relevance
 from .models import Skills
 from .models import Geography
 from .models import Content
+from .models import ImageUpload
 
 
 # Register your models here.
@@ -26,5 +27,6 @@ class GeographyDisplay(admin.ModelAdmin):
 
 admin.site.register(Geography, GeographyDisplay)
 
-
 admin.site.register(Content)
+
+admin.site.register(ImageUpload)

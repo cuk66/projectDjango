@@ -2,7 +2,7 @@
 .menu {
   display: flex;
   flex-direction: column; /* размещаем элементы к колонку */
-  width: 280px;
+  width: 300px;
   min-height: 100vh; /* на всю высоту экрана */
   position: fixed; /* чтобы меню было фиксированным */
   top: 0; /* прижимаем к верхнему */
@@ -13,7 +13,7 @@
 
 /* Свойства для контента */
 .content {
-  padding-left: 330px;
+  padding-left: 340px;
   padding-top: 40px;
   padding-right: 40px;
   padding-bottom: 40px;
@@ -46,6 +46,7 @@
 .menu__link,
 .admin__link {
   padding-left: 30px;
+  list-style-type: none;
 }
 
 /* Свойства для элементов меню */
@@ -96,6 +97,10 @@
 .menu__admin {
   margin-top: auto;
   padding-bottom: 40px;
+}
+
+.admin__item {
+    list-style-type: none;
 }
 
 th {
