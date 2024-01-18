@@ -3,13 +3,16 @@ from django.db import models
 
 # Create your models here.
 class ImageUpload(models.Model):
-    image = models.ImageField(upload_to='img', blank=False, verbose_name='Изображение')
+    image = models.ImageField(upload_to='img', blank=True, verbose_name='Изображение')
 
 
 class Relevance(ImageUpload, models.Model):
-    graph_salary_level = models.ImageField(blank=False, verbose_name='График уровень зарплат по годам')
-    graph_num_vacancy = models.ImageField(blank=False, verbose_name='График количество вакансий по годам')
+    graph_salary_level = models.ImageField(upload_to='image/', blank=False, verbose_name='График уровень зарплат по годам')
+    graph_num_vacancy = models.ImageField(upload_to='image/', blank=False, verbose_name='График количество вакансий по годам')
     table = models.TextField(blank=False, verbose_name='Таблица')
+
+    def __str__(self):
+        return f"{self.graph_salary_level} {self.graph_num_vacancy} {self.table}"
 
 
 class Skills(models.Model):

@@ -5,6 +5,12 @@
 {% endblock %}
 
 {% block content %}
-<h1>Востребованность</h1>
-<p>Востребованность</p>
+<div class="content">
+    <h1>Востребованность</h1>
+    {% for relevance_object in relevance_objects %}
+        <img src="{{ relevance_object.graph_salary_level.url }}" title="Уровень зарплат по годам"  alt="Уровень зарплат по годам" width="1000px" >
+        <img src="{{ relevance_object.graph_num_vacancy.url }}" title="Количество вакансий по годам"  alt="Количество вакансий по годам" width="1000px" >
+        <p>{{ relevance_object.table|safe }}</p>
+    {% endfor %}
+</div>
 {% endblock %}
